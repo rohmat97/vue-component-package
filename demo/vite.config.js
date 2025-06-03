@@ -6,15 +6,15 @@ export default defineConfig({
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, '../src')
-    }
+      "@": resolve(__dirname, "../src"),
+    },
   },
   server: {
-    port: 3000,
-    open: true
+    port: 3001,
+    open: true,
   },
   build: {
-    outDir: 'dist-demo',
-    emptyOutDir: true
-  }
-})
+    outDir: "dist-demo",
+    emptyOutDir: true,
+  },
+});

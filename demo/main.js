@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import MyComponentLib from '../index.js'
+import MyComponentLib from "../src/index.js";
 
 const app = createApp(App)
 app.use(MyComponentLib)
