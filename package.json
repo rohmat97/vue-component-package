@@ -11,10 +11,8 @@
   ],
   "scripts": {
     "dev": "cd demo && vite",
-    "build:lib": "vite build",
-    "build:demo": "cd demo && vite build",
-    "preview": "vite preview",
-    "build": "npm run build:lib && npm run build:demo"
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "keywords": [
     "vue",
