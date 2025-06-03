@@ -1,20 +1,12 @@
-// Export components
-export { default as HelloWorld } from './components/HelloWorld.vue';
+import "./styles.css";
+// src/index.ts
+import { App } from "vue";
+import MyButton from "./MyButton.vue";
 
-// Export the plugin
-export { default as NuxtUIPlugin } from './plugins/nuxt-ui';
-
-// Export types
-export type { NuxtUIPluginOptions } from './plugins/nuxt-ui';
-
-// Export all components
-export * from './plugins/nuxt-ui';
-
-// Default export for the library
-const VueComponentPackage = {
-  install(app: import('vue').App, options?: any) {
-    app.use(NuxtUIPlugin, options);
-  }
+export default {
+  install(app: App) {
+    app.component("MyButton", MyButton);
+  },
 };
 
-export default VueComponentPackage;
+export { MyButton };

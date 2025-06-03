@@ -10,7 +10,7 @@ console.log('Button clicked!');
 }
 </script>
 
-<style scoped>
+<style>
 .my-button {
   padding: 0.5rem 1rem;
   background-color: #3b82f6;
