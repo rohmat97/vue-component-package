@@ -1,94 +1,22 @@
-# Vue Component Library
+# Vue 3 + Vite + Nuxt UI 3
 
-A modern Vue 3 component library built with Vite, TypeScript, and Nuxt UI.
+This template should help get you started developing with Vue 3, TypeScript, Vite and [Nuxt UI](https://ui.nuxt.com).
 
-## Features
+Online demo: https://nuxt-ui-vue-starter.pages.dev
 
-- Built with Vue 3 and TypeScript
-- Uses Vite for fast development and builds
-- Integrates with Nuxt UI components
-- Tailwind CSS for styling
-- Fully typed components
-- Vue 3 Composition API support
+[![nuxt ui with vue 3 only](https://github.com/user-attachments/assets/a81af231-b2aa-4753-86c1-2c8802196a4b)](https://nuxt-ui-vue-starter.pages.dev)
 
-## Installation
+## Recommended IDE Setup
 
-```bash
-# Using npm
-npm install your-package-name
+- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-# Using yarn
-yarn add your-package-name
+## Type Support For `.vue` Imports in TS
 
-# Using pnpm
-pnpm add your-package-name
-```
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
 
-## Usage
+If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
 
-### Global Installation
-
-```typescript
-import { createApp } from 'vue';
-import App from './App.vue';
-import VueComponentPackage from 'your-package-name';
-import 'your-package-name/dist/style.css'; // Import styles
-
-const app = createApp(App);
-app.use(VueComponentPackage);
-app.mount('#app');
-```
-
-### Individual Components
-
-```vue
-<template>
-  <HelloWorld msg="Welcome to Vue Component Library" />
-</template>
-
-<script setup>
-import { HelloWorld } from 'your-package-name';
-</script>
-```
-
-## Development
-
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   pnpm install
-   ```
-3. Start the development server:
-   ```bash
-   pnpm dev
-   ```
-4. Build the library:
-   ```bash
-   pnpm build
-   ```
-
-## Building for Production
-
-To build the library for production:
-
-```bash
-pnpm build
-```
-
-This will generate:
-- `dist/vue-component-package.es.js` - ES Module bundle
-- `dist/vue-component-package.umd.js` - UMD bundle
-- `dist/style.css` - Combined CSS styles
-
-## Publishing
-
-1. Update the version in `package.json`
-2. Build the library
-3. Publish to npm:
-   ```bash
-   npm publish
-   ```
-
-## License
-
-MIT
+1. Disable the built-in TypeScript Extension
+   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
+   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
+2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.

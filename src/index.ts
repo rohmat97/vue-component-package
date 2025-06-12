@@ -1,11 +1,14 @@
 // src/index.ts
-import { App } from "vue";
-import MyButton from "./MyButton.vue";
+import './assets/main.css';
 
-export default {
-  install(app: App) {
-    app.component("MyButton", MyButton);
-  },
+// Import your components
+import MySharedComponent from './components/MySharedComponent.vue';
+
+// Export them for library consumption
+export {
+  MySharedComponent
 };
 
-export { MyButton };
+// You can also export other things like types, utils, etc.
+// export * from './types';
+// export * from './utils';

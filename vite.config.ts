@@ -1,32 +1,36 @@
-import { defineConfig } from "vite";
-import vue from "@vitejs/plugin-vue";
-import { fileURLToPath } from "url";
-import { dirname, resolve } from "path";
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import { resolve } from 'path'
+import ui from '@nuxt/ui/vite'
 
-// ESM-safe __dirname
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
+// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [
+    vue(),
+    ui({
+      ui: {
+        colors: {
+          primary: 'green',
+          neutral: 'slate'
+        }
+      }
+    })
+  ],
   build: {
     lib: {
-      entry: resolve(__dirname, "src/index.ts"),
-      name: "MyComponentLib",
-      fileName: (format) => `my-component-lib.${format}.js`,
-      formats: ["es", "umd"],
+      entry: resolve('src/index.ts'),
+      name: 'VueComponentPackage',
+      fileName: (format) => `vue-component-package.${format}.js`
     },
     rollupOptions: {
-      external: ["vue"],
+      external: ['vue', 'vue-router'],
       output: {
         globals: {
-          vue: "Vue",
-        },
-      },
-    },
-  },
-  server: {
-    port: 3001,
-    open: true,
-  },
-});
+          vue: 'Vue',
+          'vue-router': 'VueRouter'
+        }
+      }
+    }
+  }
+})
+
