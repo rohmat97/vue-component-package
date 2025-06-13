@@ -3,10 +3,12 @@ import './assets/main.css';
 
 // Import your components
 import MySharedComponent from './components/MySharedComponent.vue';
+import UButton from './components/UButton.vue';
 
 // Export them for library consumption
 export {
-  MySharedComponent
+  MySharedComponent,
+  UButton
 };
 
 // You can also export other things like types, utils, etc.

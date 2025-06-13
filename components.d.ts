@@ -11,8 +11,8 @@ declare module 'vue' {
     MySharedComponent: typeof import('./src/components/MySharedComponent.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    UApp: typeof import('./node_modules/.pnpm/@nuxt+ui@3.1.3_@babel+parser@7.27.5_embla-carousel@8.6.0_typescript@5.8.3_vite@6.3.5_@t_f5c1118bd876433a2336a60893c9427e/node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
-    UButton: typeof import('./node_modules/.pnpm/@nuxt+ui@3.1.3_@babel+parser@7.27.5_embla-carousel@8.6.0_typescript@5.8.3_vite@6.3.5_@t_f5c1118bd876433a2336a60893c9427e/node_modules/@nuxt/ui/dist/runtime/components/Button.vue')['default']
-    UCard: typeof import('./node_modules/.pnpm/@nuxt+ui@3.1.3_@babel+parser@7.27.5_embla-carousel@8.6.0_typescript@5.8.3_vite@6.3.5_@t_f5c1118bd876433a2336a60893c9427e/node_modules/@nuxt/ui/dist/runtime/components/Card.vue')['default']
+    UApp: typeof import('./node_modules/.pnpm/@nuxt+ui@3.1.3_@babel+parser@7.27.5_embla-carousel@8.6.0_typescript@5.8.3_vite@6.3.5_@t_87f4f0cb3081a09f40315924594b0a1b/node_modules/@nuxt/ui/dist/runtime/components/App.vue')['default']
+    UButton: typeof import('./src/components/UButton.vue')['default']
+    UCard: typeof import('./src/components/UCard.vue')['default']
   }
 }
